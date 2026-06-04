@@ -29,25 +29,30 @@ namespace RBXLauncher
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             
-            // Mostra o título gigante
+            // Mostra apenas o título gigante
             DisplayTitle();
-            
-            LogInfo("Iniciando...");
 
             if (!await CheckInternetConnectionAsync())
             {
-                LogError("Sem conexão com a internet. O launcher será encerrado.");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ ERRO ] Sem conexão com a internet. O launcher será encerrado.");
+                Console.ResetColor();
                 Console.ReadKey();
                 return;
             }
 
             try
             {
-                LogInfo("Verificando atualizações...");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("[ INFO ] Verificando atualizações...");
+                Console.ResetColor();
+                
                 var onlineInfo = await GetOnlineVersionInfoAsync();
                 if (onlineInfo == null)
                 {
-                    LogError("Não foi possível obter informações da versão online.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ ERRO ] Não foi possível obter informações da versão online.");
+                    Console.ResetColor();
                     Console.ReadKey();
                     return;
                 }
@@ -62,29 +67,48 @@ namespace RBXLauncher
 
                 if (!precisaAtualizar)
                 {
-                    LogSuccess("Você já está na versão mais recente.");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("[ OK ] Você já está na versão mais recente.");
+                    Console.ResetColor();
                     await Task.Delay(2000);
                 }
                 else
                 {
                     if (localVersion != null)
-                        LogInfo($"Nova versão disponível: {onlineInfo.Version} (atual: {localVersion})");
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine($"[ INFO ] Nova versão disponível: {onlineInfo.Version} (atual: {localVersion})");
+                        Console.ResetColor();
+                    }
                     else
-                        LogInfo("Nenhuma instalação local encontrada. Iniciando download.");
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("[ INFO ] Nenhuma instalação local encontrada. Iniciando download.");
+                        Console.ResetColor();
+                    }
 
                     // Exibe o changelog
                     if (onlineInfo.Changelog != null && onlineInfo.Changelog.Count > 0)
                     {
                         Console.WriteLine();
-                        LogSection("CHANGELOG");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("╔═══════════════════════════════════════════════════════════╗");
+                        Console.WriteLine("║                       CHANGELOG                           ║");
+                        Console.WriteLine("╚═══════════════════════════════════════════════════════════╝");
+                        Console.ResetColor();
+                        
                         foreach (var change in onlineInfo.Changelog)
                         {
-                            LogChangeLog($"  {change}");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"  {change}");
+                            Console.ResetColor();
                         }
                         Console.WriteLine();
                     }
 
-                    LogInfo("Iniciando instalação... por favor aguarde...");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("[ INFO ] Iniciando instalação... por favor aguarde...");
+                    Console.ResetColor();
 
                     string tempZip = Path.Combine(Path.GetTempPath(), "RBXexploit.zip");
                     await DownloadFileAsync(onlineInfo.DownloadUrl, tempZip);
@@ -103,13 +127,17 @@ namespace RBXLauncher
 
                     HideNonWhitelistedFiles(AppDataFolder);
 
-                    LogSuccess("Instalação Concluída com Sucesso!");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("[ OK ] Instalação Concluída com Sucesso!");
+                    Console.ResetColor();
                     await Task.Delay(1500);
                 }
 
                 CreateStartMenuShortcut();
 
-                LogInfo("Iniciando RBXexploit...");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("[ INFO ] Iniciando RBXexploit...");
+                Console.ResetColor();
                 await Task.Delay(1500);
 
                 string exePath = Path.Combine(AppDataFolder, "RBXexploit.exe");
@@ -119,13 +147,17 @@ namespace RBXLauncher
                 }
                 else
                 {
-                    LogError("RBXexploit.exe não encontrado na instalação.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ ERRO ] RBXexploit.exe não encontrado na instalação.");
+                    Console.ResetColor();
                     Console.ReadKey();
                 }
             }
             catch (Exception ex)
             {
-                LogError($"{ex.Message}");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[ ERRO ] {ex.Message}");
+                Console.ResetColor();
                 Console.ReadKey();
             }
         }
@@ -152,72 +184,6 @@ namespace RBXLauncher
             Console.ResetColor();
             
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════╗");
-            Console.ResetColor();
-            
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("║                        LAUNCHER OFICIAL - v1.0                                      ║");
-            Console.ResetColor();
-            
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════╝");
-            Console.ResetColor();
-            
-            Console.WriteLine();
-        }
-
-        static void LogInfo(string message)
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("[ INFO ] ");
-            Console.ResetColor();
-            Console.WriteLine(message);
-        }
-
-        static void LogError(string message)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("[ ERRO ] ");
-            Console.ResetColor();
-            Console.WriteLine(message);
-        }
-
-        static void LogSuccess(string message)
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("[ OK ] ");
-            Console.ResetColor();
-            Console.WriteLine(message);
-        }
-
-        static void LogWarning(string message)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("[ AVISO ] ");
-            Console.ResetColor();
-            Console.WriteLine(message);
-        }
-
-        static void LogSection(string section)
-        {
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine($"╔═══ {section} ═══╗");
-            Console.ResetColor();
-        }
-
-        static void LogChangeLog(string change)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(change);
-            Console.ResetColor();
-        }
-
-        static void LogDownload(string message)
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write(message);
-            Console.ResetColor();
         }
 
         static async Task<bool> CheckInternetConnectionAsync()
@@ -243,7 +209,6 @@ namespace RBXLauncher
                 client.Timeout = TimeSpan.FromSeconds(15);
                 client.DefaultRequestHeaders.Add("User-Agent", "RBXLauncher/1.0");
 
-                LogInfo("Baixando informações de versão...");
                 string json = await client.GetStringAsync(VersionJsonUrl);
 
                 var info = VersionInfo.FromJson(json);
@@ -256,25 +221,33 @@ namespace RBXLauncher
                 }
                 else
                 {
-                    LogError("O arquivo de versão online está em formato inválido.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ ERRO ] O arquivo de versão online está em formato inválido.");
+                    Console.ResetColor();
                     return null;
                 }
             }
             catch (HttpRequestException ex)
             {
-                LogError($"Falha na requisição: {ex.Message}");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[ ERRO HTTP ] Falha na requisição: {ex.Message}");
                 if (ex.InnerException != null)
-                    LogError($"Detalhes: {ex.InnerException.Message}");
+                    Console.WriteLine($"[ DETALHES ] {ex.InnerException.Message}");
+                Console.ResetColor();
                 return null;
             }
             catch (TaskCanceledException)
             {
-                LogError("A conexão com o servidor de atualização excedeu o tempo limite.");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ ERRO ] A conexão com o servidor de atualização excedeu o tempo limite.");
+                Console.ResetColor();
                 return null;
             }
             catch (Exception ex)
             {
-                LogError($"Erro geral: {ex.Message}");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[ ERRO GERAL ] {ex.Message}");
+                Console.ResetColor();
                 return null;
             }
         }
@@ -301,8 +274,9 @@ namespace RBXLauncher
                 if (totalBytes.HasValue)
                 {
                     double progress = (double)totalDownloaded / totalBytes.Value * 100;
-                    Console.Write($"\r");
-                    LogDownload($"[ DOWNLOAD ] {progress:F0}% concluído...");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write($"\r[ DOWNLOAD ] {progress:F0}% concluído...");
+                    Console.ResetColor();
                 }
             }
             Console.WriteLine();
@@ -381,7 +355,9 @@ namespace RBXLauncher
 
                 if (!IOFile.Exists(targetExe))
                 {
-                    LogWarning("RBXexploit.exe não encontrado para criar atalho.");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("[ AVISO ] RBXexploit.exe não encontrado para criar atalho.");
+                    Console.ResetColor();
                     return;
                 }
 
@@ -391,11 +367,15 @@ namespace RBXLauncher
                 shortcut.Description = "RBXexploit - Executor Roblox";
                 shortcut.Save(shortcutPath);
 
-                LogSuccess("Atalho atualizado no Menu Iniciar.");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("[ OK ] Atalho atualizado no Menu Iniciar.");
+                Console.ResetColor();
             }
             catch (Exception ex)
             {
-                LogError($"Não foi possível criar atalho no Menu Iniciar: {ex.Message}");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[ ERRO ] Não foi possível criar atalho no Menu Iniciar: {ex.Message}");
+                Console.ResetColor();
             }
         }
     }
