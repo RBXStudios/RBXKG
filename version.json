@@ -2,8 +2,7 @@
   "version": "3.0.1",
   "url": "https://github.com/RBXStudios/RBXExploit/releases/download/Version/RBXExploit.zip",
   "changelog": [
-    "[>] Improved UI",
-    "[>] Fixed Bugs",
-    "[>] Update for latest version Roblox"
+    "[>] Fixed UI Splash not loading",
+    "[>] Fixed Splash Freezing to Loading Models..."
   ]
 }
