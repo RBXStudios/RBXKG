@@ -2,7 +2,13 @@
   "version": "3.0.2",
   "url": "https://github.com/RBXStudios/RBXExploit/releases/download/Version/RBXExploit.zip",
   "changelog": [
-    "[>] Fixed Bugs",
-    "[>] Update for latest version Roblox"
+       "[>] Console Reworked (Add Tabs Debug,Console)",
+       "[+] Add Save Settings",
+       "[>] Fixed Folders not detected filers Manual",
+       "[>] Fixed Decloader",
+       "[*] Key System (SOON)",
+       "[>] Fixed Logo Roblox for Instance Page(no instance)",
+       "[>] Fixed Instances Not Unselect Instace",
+       "[>] Update for latest version roblox"
   ]
 }
