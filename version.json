@@ -1,13 +1,17 @@
 {
-  "version": "3.0.5",
+  "version": "3.0.6",
   "url": "https://github.com/RBXStudios/RBXExploit/releases/download/Version/RBXExploit.zip",
   "changelog": [
-      "[>] Fixed Time Key",
-      "[+] Add Saved Key",
-      "[+] Add Reset Key 1x for day(For Free Key) ",
-      "[>] Improved ScriptHubs to Script Page",
-      "[+] Add New Key System",
+      "[ UPDATE EXECUTOR v3.0.6 ]",
+      "[*] Fix somes bugs (soon)",
       "[>] Fixed Injector(RBXLoader) (Erro version)",
-      "[>] Update for latest version roblox"
+      "[>] Update for latest version roblox",
+      "",
+      "[ INJECTOR NOTIFY UPDATE 1.0.8 ]",
+      "[>] Fixed Pached Games Kick",
+      "[>] Update for latest version",
+      "",
+      "[ LAUNCHER NOTIFY 1.0.4 ]",
+      "[*] NEW LAUCHER DESIGNS SOON"
   ]
 }
