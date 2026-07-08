@@ -1,14 +1,12 @@
 {
-  "version": "3.0.6",
+  "version": "3.0.7",
   "url": "https://github.com/RBXStudios/RBXExploit/releases/download/Version/RBXExploit.zip",
   "changelog": [
-      "[ UPDATE EXECUTOR v3.0.6 ]",
+      "[ UPDATE EXECUTOR v3.0.7 ]",
       "[*] Fix somes bugs (soon)",
-      "[>] Fixed Injector(RBXLoader) (Erro version)",
       "[>] Update for latest version roblox",
       "",
-      "[ INJECTOR NOTIFY UPDATE 1.0.8 ]",
-      "[>] Fixed Pached Games Kick",
+      "[ INJECTOR NOTIFY UPDATE 1.1.0 ]",
       "[>] Update for latest version",
       "",
       "[ LAUNCHER NOTIFY 1.0.4 ]",
