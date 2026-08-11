@@ -1,7 +1,8 @@
 {
   "nome": "RBX KG",
-  "updatepart": "Injector, Module",
+  "updatepart": "Injector, Module Loader",
   "version": "v4.0.7",
+  "versioncompatible": "version-145f189a6a974303",
   "changelog": [
     "[+] Improved injection speed",
     "[+] Fixed crash on game startup",
