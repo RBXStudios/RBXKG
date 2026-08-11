@@ -1,1 +1,13 @@
-
+{
+  "nome": "RBX KG",
+  "updatepart": "Injector, Module",
+  "version": "v4.0.7",
+  "changelog": [
+    "[+] Improved injection speed",
+    "[+] Fixed crash on game startup",
+    "[-] Removed legacy module support"
+  ],
+  "note": "",
+  "downloadlink": "https://your-download-link-here.com",
+  "website": "https://your-website-here.com"
+}
