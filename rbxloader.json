@@ -3,6 +3,7 @@
   "version": "v1.7.9",
   "unc": "98%",
   "sunc": "100%",
+  "versioncompatible": "version-145f189a6a974303",
   "changelog": [
     "[+] Updated UNC support",
     "[+] Better sUNC compatibility",
