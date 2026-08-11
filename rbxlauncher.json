@@ -1,0 +1,12 @@
+{
+  "nome": "RBX LAUNCHER",
+  "version": "v1.4.0",
+  "changelog": [
+    "[+] New auto-update system",
+    "[+] Faster boot time",
+    "[-] Removed old UI skin"
+  ],
+  "note": "",
+  "downloadlink": "https://your-download-link-here.com",
+  "website": "https://your-website-here.com"
+}
