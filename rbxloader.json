@@ -1,0 +1,14 @@
+{
+  "nome": "RBX LOADER",
+  "version": "v1.7.9",
+  "unc": "98%",
+  "sunc": "100%",
+  "changelog": [
+    "[+] Updated UNC support",
+    "[+] Better sUNC compatibility",
+    "[-] Fixed memory leak"
+  ],
+  "note": "",
+  "obs": "Restart UI for update injector and module",
+  "website": "https://your-website-here.com"
+}
