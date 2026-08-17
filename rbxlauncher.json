@@ -2,11 +2,9 @@
   "nome": "RBX LAUNCHER",
   "version": "v1.4.0",
   "changelog": [
-    "[+] New auto-update system",
-    "[+] Faster boot time",
-    "[-] Removed old UI skin"
+    "[>] Fixed get content GitHub/Raw "
   ],
   "note": "",
-  "downloadlink": "https://your-download-link-here.com",
-  "website": "https://your-website-here.com"
+  "downloadlink": "https://getrbxkg.up.railway.app/download",
+  "website": "https://getrbxkg.up.railway.app"
 }
