@@ -5,11 +5,9 @@
   "sunc": "100%",
   "versioncompatible": "version-145f189a6a974303",
   "changelog": [
-    "[+] Updated UNC support",
-    "[+] Better sUNC compatibility",
-    "[-] Fixed memory leak"
+    "[+] Fixed getgenv and drawing"
   ],
   "note": "",
   "obs": "Restart UI for update injector and module",
-  "website": "https://your-website-here.com"
+  "website": "https://getrbxkg.up.railway.app"
 }
