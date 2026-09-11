@@ -2,7 +2,7 @@
   "nome": "RBX LAUNCHER",
   "version": "v1.4.0",
   "changelog": [
-    "[>] Fixed get content GitHub/Raw "
+    "[>] Fixed not extrated pastas workspace and autoexecute"
   ],
   "note": "",
   "downloadlink": "https://getrbxkg.up.railway.app/download",
