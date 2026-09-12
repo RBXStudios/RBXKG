@@ -1,9 +1,11 @@
 {
   "nome": "RBX WEBSITE",
-  "updatepart": "System key, Website, API System Bypass",
+  "updatepart": "System key",
   "version": "v1.0.5",
   "changelog": [
-    "[>] Fixed problems to get key free"
+    "[*] Key System Work.ink",
+    "[>] Fixed GetURL token",
+    "[*] Multi Key Encurtator: Lootlabs(problems token),Linkvertice(not tested),Work.ink(OK)  (soon)"
   ],
   "downloadlink": "https://getrbxkg.up.railway.app/download",
   "website": "https://getrbxkg.up.railway.app"
