@@ -5,7 +5,11 @@
   "changelog": [
     "[>] Fixed download RBXLauncher link",
     "[>] Fixed lootlabs not loading",
-    "[+] Add Multi Key Encurtator: Lootlabs(OK),Linkvertice(not tested),Work.ink(Testing)"
+    "[+] Add Multi Key Encurtator:", 
+    "    Lootlabs(Problems)", 
+    "    Linkvertice(not working)",
+    "    Work.ink(Working)",
+    "[*] Analizing others encurtators"
   ],
   "downloadlink": "https://getrbxkg.up.railway.app/download",
   "website": "https://getrbxkg.up.railway.app"
