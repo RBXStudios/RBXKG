@@ -3,9 +3,8 @@
   "updatepart": "System key",
   "version": "v1.0.7",
   "changelog": [
-    "[<] Reverted Key System to lootlabs",
-    "[>] Fixed Somes problems revoked token",
-    "[>] Improved key(ativada quando coloca no executor)",
+    "[>] Fixed problems in System Key to gerate",
+    "[>] Fixed Key Expired",
     "[*] Multi Key Encurtator: Lootlabs(problems token),Linkvertice(not tested),Work.ink(OK)  (soon)"
   ],
   "downloadlink": "https://getrbxkg.up.railway.app/download",
