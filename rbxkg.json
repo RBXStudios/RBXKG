@@ -1,10 +1,10 @@
 {
   "nome": "RBX KG",
   "updatepart": "UI, System key, Website, Installer, Injector, Module Loader",
-  "version": "v4.0.7",
+  "version": "v4.0.8",
   "versioncompatible": "version-c5aecda2245e4fae",
   "changelog": [
-    "[*] Foi consertado os problemas de key (isso e so uma aviso nao e um update)"
+    "[>] Fixed Key Not Active"
   ],
   "note": "(pra quem n tem o launcher instale) pra quem tiver o laucher execute ele e instala a versao atual para atualizar",
   "downloadlink": "https://getrbxkg.up.railway.app/download",
