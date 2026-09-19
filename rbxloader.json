@@ -3,9 +3,9 @@
   "version": "v1.7.9",
   "unc": "98%",
   "sunc": "100%",
-  "versioncompatible": "version-145f189a6a974303",
+  "versioncompatible": "version-4310300497aa4917",
   "changelog": [
-    "[+] Fixed getgenv and drawing"
+    "[>] Update for latest version roblox"
   ],
   "note": "",
   "obs": "Restart UI for update injector and module",
