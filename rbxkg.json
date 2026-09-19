@@ -1,10 +1,10 @@
 {
   "nome": "RBX KG",
-  "updatepart": "Injector, Module",
+  "updatepart": "Github, UI",
   "version": "v4.0.9",
   "versioncompatible": "version-4310300497aa4917",
   "changelog": [
-    "[>] Update for latest version Roblox"
+    "[>] Fixed version download"
   ],
   "note": "(REINSTALAÇAO OBRIGATORIA)(pra quem n tem o launcher instale) pra quem tiver o laucher execute ele e instala a versao atual para atualizar",
   "downloadlink": "https://getrbxkg.up.railway.app/download",
