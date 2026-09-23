@@ -1,12 +1,19 @@
 {
   "nome": "RBX KG",
-  "updatepart": "Github, UI",
-  "version": "v4.0.9",
-  "versioncompatible": "version-4310300497aa4917",
+  "updatepart": "UI, Injector Loader",
+  "version": "v4.1.0",
+  "versioncompatible": "version-2366ba214ec740ca",
   "changelog": [
-    "[>] Fixed version download"
+    "[UI]:",
+    "[>] Updated for latest version",
+    "[*] New version 4.1.0",
+    "[*] Version 4.5.0 Soon Fixed Full Bugs",
+    "[RBX LOADER]:",
+    "[>] Updated for latest version Roblox",
+    "[>] Fixed Bugs for Execution (Failed for execute all instance or PID)",
+    "[*] Report Bugs and Crashs the channel Executor Report"
   ],
-  "note": "(REINSTALAÇAO OBRIGATORIA)(pra quem n tem o launcher instale) pra quem tiver o laucher execute ele e instala a versao atual para atualizar",
+  "note": "(pra quem n tem o launcher instale) pra quem tiver o laucher execute ele e instala a versao atual para atualizar",
   "downloadlink": "https://getrbxkg.up.railway.app/download",
   "website": "https://getrbxkg.up.railway.app"
 }
