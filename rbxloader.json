@@ -1,11 +1,11 @@
 {
   "nome": "RBX LOADER",
-  "version": "v1.8.1",
+  "version": "v1.8.2",
   "unc": "99%",
   "sunc": "100%",
   "versioncompatible": "version-2366ba214ec740ca",
   "changelog": [
-    "[>] Update for latest version roblox"
+    "[>] Fixed Instability Crashs for Roblox (Thanks Bink for testing)"
   ],
   "note": "",
   "obs": "Restart UI for update injector and module",
