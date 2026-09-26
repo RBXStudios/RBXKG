@@ -1,11 +1,16 @@
 {
   "nome": "RBX LOADER",
-  "version": "v1.8.3",
-  "unc": "98%",
-  "sunc": "95%",
+  "version": "v1.8.4",
+  "unc": "99%",
+  "sunc": "96%",
   "versioncompatible": "version-2366ba214ec740ca",
   "changelog": [
-    "[<] sUNC Broken Reduce for 95% and 98% UNC"
+    "[>] Fixed Decompile issue on Myriad",
+    "[>] Fixed TpHandler",
+    "[>] Fixed Renderer",
+    "[+] Add more luau detection bypasses",
+    "[>] Improved Hookfunction",
+    "[*] UNC: 99% sUNC: 96%"
   ],
   "note": "",
   "obs": "Restart UI for update injector and module",
